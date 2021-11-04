@@ -1,6 +1,6 @@
 # CryptoDappy
 
-CryptoDappy is the fastes way to get started with Flow. In this course, you will learn everything you need to know to get started fast building blockchain applications on Flow. Specifically you will learn how to
+CryptoDappy is the fastes way to get started with Flow.
 
 - authenticate users with a blockchain wallet
 - query blockchain data with scripts
