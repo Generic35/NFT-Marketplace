@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import {query} from '@onflow/fcl'
+import { query, mutate, tx } from '@onflow/fcl'
 import { CHECK_COLLECTION } from '../flow/check-collection.script'
+import { CREATE_COLLECTION } from '../flow/create-collection.tx'
 
 export default function useCollection(user) {
   const [loading, setLoading] = useState(true)
@@ -26,7 +27,18 @@ export default function useCollection(user) {
 		checkCollection()
 	},[user?.addr])
 
-  const createCollection = async () => {
+ const createCollection = async () => {
+		try {
+			let res = await mutate({
+				cadence: CREATE_COLLECTION,
+				limit: 55
+			})
+
+			await tx(res).onceSealed()
+		} catch (err){
+			console.log(err);
+			setLoading(false);
+		}
     setCollection(true)
   }
 
