@@ -1,4 +1,4 @@
-# NFT Marketplace
+# NFT-Marketplace
 
 An NFT marketplace leveraging the Flow blockchain
 
