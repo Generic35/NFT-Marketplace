@@ -1,6 +1,6 @@
-# CryptoDappy
+# NFT Marketplace
 
-CryptoDappy is the fastes way to get started with Flow.
+An NFT marketplace leveraging the Flow blockchain
 
 - authenticate users with a blockchain wallet
 - query blockchain data with scripts
@@ -9,4 +9,5 @@ CryptoDappy is the fastes way to get started with Flow.
 - and sell your own digital assets by integrate easy payment onramps and a marketplace to your application
 
 ## Where to continue: Kitty Items
+
 The standard reference app of Flow is [Kitty Items] (https://github.com/onflow/kitty-items)
