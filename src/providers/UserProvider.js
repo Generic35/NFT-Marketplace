@@ -17,7 +17,7 @@ export default function UserProvider({ children }) {
     addDappy,
     batchAddDappies,
     mintDappy,
-  } = useUserDappies();
+  } = useUserDappies(user, collection, getFUSDBalance);
 
   return (
     <UserContext.Provider

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { query, mutate, tx } from "@onflow/fcl";
-import { CHECK_COLLECTION } from "../flow/check-collection.script";
-import { CREATE_COLLECTION } from "../flow/create-collection.tx";
-import { DELETE_COLLECTION } from "../flow/delete-collection.script";
+import { useEffect, useState } from 'react';
+import { query, mutate, tx } from '@onflow/fcl';
+import { CHECK_COLLECTION } from '../flow/check-collection.script';
+import { CREATE_COLLECTION } from '../flow/create-collection.tx';
+import { DELETE_COLLECTION } from '../flow/delete-collection.script';
 
 export default function useCollection(user) {
   const [loading, setLoading] = useState(true);
@@ -24,7 +24,7 @@ export default function useCollection(user) {
       }
     };
     checkCollection();
-  }, []);
+  }, [user?.addr]);
 
   const createCollection = async () => {
     try {
